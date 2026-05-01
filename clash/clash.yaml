@@ -158,9 +158,9 @@ proxy-groups:
     interval: 300
   - {name: 游戏选择, type: select, include-all-providers: true, filter: *FilterAll, proxies: [PASS, DIRECT]}
   - {name: AI, type: select, include-all-providers: true, filter: *FilterAll}
-  - {name: YouTube, type: select, include-all-providers: true, filter: *FilterAll}
+  - {name: YouTube, type: select, include-all-providers: true, filter: *FilterAll, proxies: [自动选择，故障转移，负载均衡]}
   - {name: Speedtest国际, type: select, include-all-providers: true, filter: *FilterAll, proxies: [PASS, DIRECT]}
-  - {name: Telegram, type: select, include-all-providers: true, filter: *FilterAll}
+  - {name: Telegram, type: select, include-all-providers: true, filter: *FilterAll, proxies: [自动选择，故障转移，负载均衡]}
   - {name: 兜底后备策略, type: select, proxies: [PROXY,香港自动策略, 台湾自动策略, 日本自动策略, 韩国自动策略, 新国自动策略, 美国自动策略, 英国自动策略, 法国自动策略, 德国自动策略]}
 
   - {name: 香港自动策略, <<: *UrlTest, filter: *FilterHK}
